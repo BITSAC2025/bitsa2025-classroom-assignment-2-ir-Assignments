@@ -1,9 +1,11 @@
 #!/bin/bash
+set -e
 
 rm -rf build/
+mkdir -p build
 
-# shellcheck disable=SC2164
-mkdir build && cd build/
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j4
+cmake --build build -j4
