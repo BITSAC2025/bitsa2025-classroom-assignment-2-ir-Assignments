@@ -11,7 +11,7 @@ env:
 
 jobs:
   grade-assignment:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Compare with Reference Answer
 
     steps:
