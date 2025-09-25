@@ -95,7 +95,6 @@ if (DEFINED SUBDIRS)
     endforeach ()
 else ()
     add_subdirectory(Assignment-2-IR)
-    add_subdirectory(Assignment-3-CGCFG)
 endif ()
 
 
