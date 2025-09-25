@@ -2,7 +2,7 @@ name: AutoGrader
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 env:
@@ -15,7 +15,7 @@ jobs:
     name: Compare with Reference Answer
 
     steps:
-      # Checkout student's code
+      # Checkout students' code
       - name: Checkout Student's Code
         uses: actions/checkout@v4
 
@@ -41,7 +41,7 @@ jobs:
           chmod +x build.sh
           ./build.sh
 
-      # Compile student's code
+      # Compile students' code
       - name: Compile Student's Code
         run: |
           chmod +x build.sh
